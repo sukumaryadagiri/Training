@@ -1,0 +1,25 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <base target="_top">
+      <?!= HtmlService.createHtmlOutputFromFile('Stylesheet').getContent(); ?>
+    </head>
+    <body>
+      
+      <table >
+         <tr>
+          <? for (var j = 0; j < report[0].length; j++) { ?>
+          <th><?= report[0][j] ?></th>
+          <? } ?>
+         </tr>
+         
+          <? for (var i = 1; i < report.length; i++) { ?>
+          <tr>
+          <? for (var j = 0; j < report[i].length; j++) { ?>
+          <td><?= report[i][j] ?></td>
+          <? } ?>
+          </tr>
+          <? } ?>
+      </table>
+    </body>
+  </html>
